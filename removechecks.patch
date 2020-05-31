@@ -1,0 +1,57 @@
+--- /usr/lib/python3.8/site-packages/pulseaudio_dlna/daemon.py2	2020-05-31 17:32:57.129676303 +0000
++++ /usr/lib/python3.8/site-packages/pulseaudio_dlna/daemon.py	2020-05-31 17:35:14.017437827 +0000
+@@ -156,27 +156,27 @@
+ 
+     def attach(self):
+ 
+-        if not self._is_pulseaudio_user_process():
+-            self.disabled = True
+-            logger.info('Ignoring pulseaudio process ({pid})!'.format(
+-                pid=self.pid))
+-            return
++        #if not self._is_pulseaudio_user_process():
++        #    self.disabled = True
++        #    logger.info('Ignoring pulseaudio process ({pid})!'.format(
++        #        pid=self.pid))
++        #    return
+ 
+         logger.info('Attaching application to pulseaudio ({pid})'.format(
+             pid=self.pid))
+ 
+-        proc_env = self.env
+-        if not proc_env:
+-            logger.error(
+-                'Could not get the environment of pulseaudio ({pid}). '
+-                'Aborting.'.format(pid=self.pid))
+-            return
+-
+-        missing_env = missing_env_vars(proc_env)
+-        if len(missing_env) > 0:
+-            logger.warning(
+-                'The following environment variables were not set: "{}". '
+-                'Starting as root may not work!'.format(','.join(missing_env)))
++        #proc_env = self.env
++        #if not proc_env:
++        #    logger.error(
++        #        'Could not get the environment of pulseaudio ({pid}). '
++        #        'Aborting.'.format(pid=self.pid))
++        #    return
++
++        #missing_env = missing_env_vars(proc_env)
++        #if len(missing_env) > 0:
++        #    logger.warning(
++        #        'The following environment variables were not set: "{}". '
++        #        'Starting as root may not work!'.format(','.join(missing_env)))
+ 
+         try:
+             self.application = (
+@@ -184,7 +184,7 @@
+                     sys.argv,
+                     uid=self.uid,
+                     gid=self.gid,
+-                    env=self.compressed_env,
++                    #env=self.compressed_env,
+                     cwd=os.getcwd()))
+         except OSError as e:
+             self.application = None
+
