@@ -1,7 +1,7 @@
 FROM fedora:32
 RUN dnf install -y rygel pulseaudio
 RUN dnf install -y dbus-daemon procps-ng psmisc net-tools cargo alsa-lib-devel pulseaudio-libs-devel
-ADD https://github.com/librespot-org/librespot/archive/e8ec5feb2260e9d2e3b8bfc927cc5211d626e015.tar.gz /librespot.tar.gz
+ADD https://github.com/librespot-org/librespot/archive/refs/tags/v0.2.0.tar.gz /librespot.tar.gz
 RUN mkdir -p /run/dbus
 RUN dnf install -y 'dnf-command(copr)' && \
     dnf -y copr enable cygn/pulseaudio-dlna && \
