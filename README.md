@@ -17,6 +17,8 @@ Docker compose snipped
       - LIBRESPOT_NAME=spotifydlna
       - PULSEAUDIO_DLNA_OPTS=--codec wav --renderer-urls http://<dlna device ip>:8080/description.xml
       - LIBRESPOT_OPTS=-u login -p password
+    extra_hosts:
+      - "ap-gew4.spotify.com:104.199.65.124"
 ```
 
 # TODO
