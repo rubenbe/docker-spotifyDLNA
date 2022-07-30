@@ -23,5 +23,4 @@ Docker compose snipped
 
 # TODO
 * Reduce size by using a build container
-* Better process management instead of backgrounding and sleeping
 * Don't run everything as root
