@@ -1,5 +1,5 @@
---- /usr/lib/python3.8/site-packages/pulseaudio_dlna/daemon.py2	2020-05-31 17:32:57.129676303 +0000
-+++ /usr/lib/python3.8/site-packages/pulseaudio_dlna/daemon.py	2020-05-31 17:35:14.017437827 +0000
+--- /usr/lib/python3.9/site-packages/pulseaudio_dlna/daemon.py2	2020-05-31 17:32:57.129676303 +0000
++++ /usr/lib/python3.9/site-packages/pulseaudio_dlna/daemon.py	2020-05-31 17:35:14.017437827 +0000
 @@ -156,27 +156,27 @@
  
      def attach(self):
